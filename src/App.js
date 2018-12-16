@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import GamesPage from './GamesPage'
-import './App.css';
-import { Link , Route} from 'react-router-dom'
-
-
+import { Route , Switch} from 'react-router-dom'
+import Movielist from './Movielist'
+import MovieDetails from './MovieDetails'
 
 class App extends Component {
   render() {
     return (
-      <div>
-
-             <Link to='Games'>Games</Link>
-          
-          <Route path="/Games" component={GamesPage}/>
-      
-      </div>
+      <section>
+        <Switch>
+     <Route exact path='/' component={Movielist}/>
+     <Route path='/:photo_id' component={MovieDetails}/>
+     </Switch>
+      </section>
     );
   }
 }
