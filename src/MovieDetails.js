@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 
 
 class MovieDetails extends React.Component{
@@ -19,7 +20,8 @@ componentDidMount(){
     render(){
         const {movieDetails}=this.state
         return(
-            <div className='rows'>
+            <div className='row'>
+            <NavLink to='/'> Back to list</NavLink>
             <div className='container'  >
             <div key={movieDetails.id} className="col s4 m4">
               <div className="card">
